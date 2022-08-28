@@ -19,3 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('users', 'App\Http\Controllers\API\UserController@users');
+
+Route::prefix('v1')->group(function(){
+    Route::resource('articles','App\Http\Controllers\API\ArticlesController');
+});

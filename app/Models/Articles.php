@@ -14,10 +14,12 @@ class Articles extends Model
         'title',
         'content',
         'image',
+        'user_id',
+        'category_id'
     ];
 
-   /* public function category()
+    public function category()
     {
         return $this->belongsTo(Categories::class);
-    }*/
+    }
 }
